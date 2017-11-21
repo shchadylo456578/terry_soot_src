@@ -1,0 +1,33 @@
+// Includes all styles
+// Supports glob patterns imports
+
+//Settings:
+// No settings for now. The idea behind this section is to create  a variables for
+
+//Core:
+//@import "vendor/bootstrap.scss";
+//@import "vendor/bootstrap-xxm.scss";
+//@import "vendor/bootstrap-xxs.scss";
+@import "modules/grid.scss";
+
+
+//Mixins:
+@import "mixins/**/*.scss";
+
+//Helpers:
+@import "../node_modules/normalize.css/normalize";
+
+//Modules:
+@import "modules/**/*.scss";
+
+//Components | Blocks
+// the components are adding from bottom to the top of complexity.
+// first - the primitive blocks (modules folder)
+// last - pages - the specific styles for the set of building blocks
+
+
+@import "modules/**/*.scss";
+@import "components/**/*.scss";
+@import "partials/**/*.scss";
+@import "pages/**/*.scss";
+

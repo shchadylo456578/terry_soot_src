@@ -1,0 +1,15 @@
+// Extra bold
+@include font-face('Proxima Nova', '../fonts/proximanova-exbold/proximanova-xbold', normal, 800);
+
+// bold
+@include font-face('Proxima Nova', '../fonts/proximanova-bold/proximanova-bold', normal, 700);
+@include font-face('Proxima Nova', '../fonts/proximanova-bold-it/proximanova-boldit', italic, 700);
+
+// Normal
+@include font-face('Proxima Nova', '../fonts/proximanova-reg/proximanova-reg', normal, 400);
+@include font-face('Proxima Nova', '../fonts/proximanova-reg-it/proximanova-regit', italic, 400);
+
+
+// Light
+@include font-face('Proxima Nova', '../fonts/proximanova-light/proximanova-light', normal, 300);
+@include font-face('Proxima Nova', '../fonts/proximanova-light-it/proximanova-lightit', italic, 300);

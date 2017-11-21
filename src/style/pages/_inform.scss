@@ -1,0 +1,189 @@
+$transition : .5s;
+$angle : 35deg;
+$bg : #919191;
+
+.wrapper {
+
+  .inform {
+    @include row-flex();
+    @include flex-direction(column);
+
+    @include col();
+    @include col-6();
+    @include col-md-8();
+    @include col-sm-10();
+    @include col-xs-12();
+    @include col-xxs-12();
+    @include offset-left-padding(1.8);
+    @include offset-left-padding-lg(1.8);
+    @include offset-left-padding-md(1.8);
+    @include offset-left-padding-sm(1.8);
+    @include offset-left-padding-xs(0);
+    @include offset-left-padding-xxs(0);
+
+
+
+    .collections-panel {
+      margin-bottom: 26px;
+
+      //ARROW
+
+      .arrow {
+        position: absolute;
+        left: -36px;
+        top: 26px;
+        background: $bg;
+        width: 28px;
+        height: 2px;
+        transition: $transition;
+        transform: rotate(-90deg);
+
+        &:before { transform: rotate(-45deg);}
+        &:after { transform: rotate(45deg);}
+
+        &:before, &:after {
+          display: block;
+          content: "";
+          position: absolute;
+          left: -1px;
+          background: $bg;
+          width: 16px;
+          height: 2px;
+          transform-origin: 5%;
+          transition: $transition;
+        }
+      }
+
+      .switch.up-pointer {
+        .arrow {
+          &:before, &:after {
+            left: 28px;
+          }
+          &:before { transform: rotate(133deg);}
+          &:after { transform: rotate(-133deg);}
+        }
+      }
+
+      .switch:hover .arrow{
+        background: #5473d1;
+      }
+
+      .arrow.changeColor{
+        background: #5473d1;
+      }
+
+
+
+
+      .switch:hover .arrow:after, .switch:hover .arrow:before {
+        background: #5473d1;
+      }
+
+      .arrow.to_show:after, .to_show:before {
+        background: #5473d1;
+      }
+
+      .switch:hover .to_show:after, .switch:hover .to_show:before {
+        background:  #5473d1;
+      }
+
+      //ARROW
+
+
+
+      //ACCORDION-Text
+      .accordion {
+        @include header-text();
+
+        &:hover {
+          color: #5473d1;
+          transition: all 0.3s ease;
+        }
+      }
+
+
+      .accordion-color.changeColorText{
+        color: #5473d1;
+      }
+
+      //ACCORDION-Text
+
+
+      //PANEL-ACCORDION-DOWN
+
+      .panel {
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        .button-inform {
+          a {
+            display: inline-block;
+            width: 100%;
+          }
+          .button {
+            width: 100%;
+            padding: 15px 0 14px;
+            border: solid 3px #5473d1;
+
+            color: #5473d1;
+            background-color: #fff;
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .button:hover {
+            color: #fff;
+            background-color: #5473d1;
+            transition: all 0.3s ease;
+          }
+        }
+
+        .text-1 {
+          margin-top: 11px;
+          font-size: 17px;
+          color: #48484a;
+          font-weight: normal;
+          line-height: 1.47;
+
+        }
+
+        .text-2 {
+          font-size: 23px;
+          color: #48484a;
+          font-weight: 300;
+          margin: 50px 0 13px;
+        }
+
+        .text-3 {
+          padding: 0 1px;
+          margin-top: 80px;
+          margin-bottom: 15px;
+          font-size: 23px;
+          font-weight: lighter;
+          line-height: 1.7;
+          font-style: italic;
+          color: #919191;
+        }
+
+        .text-4 {
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          color: #48484a;
+          line-height: 1.67;
+
+        }
+        .text-5 {
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          color: #48484a;
+
+        }
+      }
+      //PANEL-ACCORDION-DOWN
+    }
+  }
+}
